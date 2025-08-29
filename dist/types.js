@@ -13,3 +13,7 @@ function saludar() {
 }
 var response3 = null;
 var response44 = undefined;
+var response5 = 5;
+response5 === null || response5 === void 0 ? void 0 : response5.toString(); //null safety
+var responseProducts;
+var responseProducts333;

@@ -18,6 +18,16 @@ function saludar(): void {
 let response3 = null;
 let response44 = undefined;
 
+let response5: number | null = 5;
+response5?.toString(); //null safety
+
+let responseProducts: number | undefined;
+
+type ResponseTypeService = string | undefined;
+
+let responseProducts333: ResponseTypeService;
+
+
 
 
 
