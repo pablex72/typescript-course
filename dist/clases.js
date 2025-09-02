@@ -16,6 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 var Animal = /** @class */ (function () {
     function Animal() {
         this.age = 10; // priavate cerrado al exterior pero se usa dentro de la clase
+        this.identity = "lll";
     }
     Animal.prototype.sayHi = function () {
         console.log("grrrrr", this.age);
@@ -28,8 +29,11 @@ myAnimal.sayHi();
 var Dog = /** @class */ (function (_super) {
     __extends(Dog, _super);
     function Dog() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        return _super.call(this) || this;
     }
+    Dog.prototype.sayHi = function () {
+        this.identity;
+    };
     return Dog;
 }(Animal));
 var myDog = new Dog();
