@@ -74,3 +74,32 @@ const res = new HttpResponse(myUser, 200, 1);
 console.log(res);
 
 
+/////////////// CONTROLADOR con TODOS LOS ARRAYS
+class CRUD<T> {
+    private items: T[];
+    constructor(items: T[]){
+        this.items = items;
+    }
+
+    addItem(item: T){
+        this.items.push(item)
+    }
+
+    removeItem(){
+        this.items.pop();
+    }
+
+    printItems(): T[]{
+        return this.items;
+    }
+}
+
+const users: UserResponse[] = [
+    { id: 1, name: "fewa"},
+    { id: 2, name: "cxz"},
+    { id: 3, name: "ytu"},
+];
+
+const userCRUD: CRUD<UserResponse> = new CRUD(users);
+userCRUD.addItem({ id:4, name: "Typescript" });
+console.log(userCRUD.printItems());
